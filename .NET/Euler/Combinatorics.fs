@@ -3,9 +3,8 @@
 open NUnit.Framework
 
 module Combinatorics = 
+    open Euler.Utils
 
-    open Utils
-    
     let rec powerset lst = seq {
         match lst with
         | [] -> yield []
