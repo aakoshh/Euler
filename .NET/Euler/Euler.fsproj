@@ -43,10 +43,14 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils.fs" />
     <Compile Include="Primes.fs" />
     <Compile Include="Combinatorics.fs" />
     <Compile Include="Euler51.fs" />
     <None Include="Script.fsx" />
+    <Compile Include="Euler52.fs" />
+    <Compile Include="Euler53.fs" />
+    <Compile Include="Euler54.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
