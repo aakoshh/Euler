@@ -66,7 +66,7 @@ module Euler55 =
     
     /// count non-terminating numbers below 10000
     let solve () = 
-        [1I .. 9999I] |> List.filter (seekPalindrome >> Option.isNone) |> List.length
+        seq {1I .. 9999I} |> Seq.filter (seekPalindrome >> Option.isNone) |> Seq.length
 
 
     module Tests = 
