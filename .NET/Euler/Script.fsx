@@ -5,11 +5,10 @@
 #load "Utils.fs"
 #load "Primes.fs"
 #load "Combinatorics.fs"
-#load "Euler57.fs"
+#load "Euler58.fs"
 open Euler
 open Utils
 
 
-Euler.Euler57.solve()
+Euler.Euler58.solve()
 
-Euler.Euler57.expansion 999

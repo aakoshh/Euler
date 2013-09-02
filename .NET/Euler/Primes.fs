@@ -20,6 +20,15 @@ module Primes =
     /// Get just the numbers from a sieve
     let toSet sieve = sieve |> Array.filter ((<>) 0) |> Set.ofArray
 
+    /// Check if a number is prime naively
+    let isPrimeNaive n = 
+        let rec loop i = 
+            if i * i > n then true
+            elif n % i = 0 then false
+            else loop (i+1)
+        if n <= 1 then false else loop 2
+
+
 
     /// Tests for prime numbers
     module Tests = 
@@ -36,5 +45,11 @@ module Primes =
             let sieve = buildSieve 10
             Assert.IsTrue( isPrime sieve 5 )
             Assert.IsFalse( isPrime sieve 8 )
+
+        [<Test>]
+        let IsPrimeNaiveWorks() = 
+            let primes = [false; false; true; true; false; true; false; true; false; false; false]
+            let isprim = List.init 11 isPrimeNaive
+            Assert.AreEqual(primes, isprim)
 
 

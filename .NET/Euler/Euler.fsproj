@@ -53,6 +53,7 @@
     <Compile Include="Euler55.fs" />
     <Compile Include="Euler56.fs" />
     <Compile Include="Euler57.fs" />
+    <Compile Include="Euler58.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
   <PropertyGroup>

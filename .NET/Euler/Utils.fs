@@ -28,4 +28,11 @@ module Utils =
             | _ ->  let v = f(args, ctx) 
                     cache.Add(args, v)
                     v
+
+    /// Create a function to recursively enumerate with sequence elements.
+    let makeNext (s: seq<'a>) = 
+        let g = s.GetEnumerator()
+        fun () -> 
+            g.MoveNext() |> ignore // meant to work with infinite seq
+            g.Current
     
